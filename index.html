@@ -586,15 +586,86 @@
             </li>
           </ul>
         </div>
+        <div class="footer-form-conteiner">
+          <p class="form-footer-title">Підпишіться на розсилку</p>
+          <form class="footer-form" name="footer_form">
+            <label class="footer-form-send">
+              <input
+                class="email-input"
+                type="email"
+                name="footer_email_send"
+                placeholder="E-mail"
+              />
+            </label>
+            <button class="footer-form-btn" type="submit">
+              Підписатися
+              <svg class="icon-telegram" width="24" height="24">
+                <use href="./icon/sprite-svg.svg#icon-telegram"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal">
         <button class="close-btn" type="button" data-modal-close>
           <svg class="close-btn-icone" width="11px" height="11px">
-            <use href="./icon/close-btn.svg#close-btn-icone"></use>
+            <use href="./icon/sprite-svg.svg#close-btn-icone"></use>
           </svg>
         </button>
+        <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
+        <form class="modal-form">
+          <div class="form-group">
+            <label for="form-name" class="form-field"
+              ><span class="form-name">Ім'я</span>
+              <input class="form-input" id="form-name" type="text" name="user_name" />
+              <svg class="form-icon" width="12" height="12" required>
+                <use href="./icon/sprite-svg.svg#icon-user"></use>
+              </svg>
+            </label>
+
+            <label for="telephone-form" class="form-field">
+              <span class="form-name">Телефон</span>
+              <input
+                id="telephone-form"
+                class="form-input"
+                type="tel"
+                name="telephone_form"
+                required
+              />
+              <svg class="form-icon" width="13" height="13">
+                <use href="./icon/sprite-svg.svg#icon-phone"></use>
+              </svg>
+            </label>
+
+            <label for="email_form" class="form-field"
+              ><span class="form-name">Пошта</span>
+              <input id="email-form" class="form-input" type="email" name="email_form" required />
+              <svg class="form-icon" width="15" height="12">
+                <use href="./icon/sprite-svg.svg#icon-email"></use>
+              </svg>
+            </label>
+            <label class="form-field">
+              <span class="form-name">Коментар</span>
+              <textarea
+                class="form-massege"
+                placeholder="Введіть текст"
+                name="user_messege"
+                cols="30"
+                rows="8"
+              ></textarea>
+            </label>
+          </div>
+          <label class="form-agreement">
+            <input class="form-checkbox" type="checkbox" name="agreement-checkbox" />
+            <span class="form-agreement-text"
+              >Погоджуюся з розсилкою та приймаю
+              <a class="form-agreement-link" href="">Умови договору</a>
+            </span>
+          </label>
+          <button class="button form-btn" type="submit">Відправити</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
