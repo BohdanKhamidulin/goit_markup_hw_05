@@ -1,0 +1,70 @@
+.header {
+  & .header-item:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+.header-conteiner {
+  border-bottom: 1px solid var(--line-color);
+  @extend .conteiner;
+  @extend .wrapper;
+}
+.header-nav {
+  @extend .wrapper;
+}
+.header-list {
+  @extend .list;
+  @extend .wrapper;
+}
+.header-item__link {
+  position: relative;
+  display: block;
+  color: var(--main-color);
+  margin-left: 0px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-weight: 500;
+  transition-property: color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
+
+  @extend .link;
+
+  &:focus,
+  &:hover {
+    color: var(--active-color);
+  }
+  &.header-item__link--current::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: var(--active-color);
+  }
+}
+
+.header-item__contacts {
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  gap: 10px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--second-color);
+  fill: currentColor;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @extend .link;
+
+  &:hover,
+  &:focus {
+    color: var(--active-color);
+  }
+}
