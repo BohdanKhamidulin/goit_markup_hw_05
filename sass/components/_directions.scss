@@ -2,10 +2,10 @@
   @extend .section;
 }
 .directions__conteiner {
-  @extend .conteiner;
+  @extend %conteiner;
 }
 .directions__title {
-  @extend .title;
+  @extend %title;
 }
 .directions__item {
   position: relative;

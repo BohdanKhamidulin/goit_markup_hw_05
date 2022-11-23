@@ -1,14 +1,14 @@
 .benefits {
   padding-bottom: 0;
-  @extend .section;
+  @extend %section;
 }
 .benefits__conteiner {
-  @extend .conteiner;
+  @extend %conteiner;
 }
 .benefits-list {
   display: flex;
   column-gap: 30px;
-  @extend .list;
+  @extend %list;
 }
 .benefits-item {
   max-width: 270px;

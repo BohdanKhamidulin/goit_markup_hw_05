@@ -40,7 +40,8 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  @include border($color: rgba(0, 0, 0, 0.1));
 
   background-color: transparent;
   padding: 0;
@@ -73,7 +74,9 @@
   width: 100%;
   padding: 12px;
   padding-left: 42px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
+
+  @include border(color: rgba(33, 33, 33, 0.2));
+
   border-radius: 4px;
   outline: transparent;
   transition-property: border-color;
@@ -84,12 +87,13 @@
   &:focus {
     border-color: var(--active-color);
     transition-property: border-color;
+
+    &:focus + .modal-form__icon {
+      fill: var(--active-color);
+    }
   }
 }
 
-.modal-form__input:focus + .modal-form__icon {
-  fill: var(--active-color);
-}
 .modal-form__icon {
   display: block;
   position: absolute;
@@ -138,19 +142,22 @@
   appearance: none;
   width: 16px;
   height: 16px;
-  border: 2px solid #212121;
+
+  @include border($size: 2px, $color: #212121);
+
   border-radius: 3px;
   cursor: pointer;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='10' viewBox='0 0 13 10' fill='none' %3E%3Cpath d='M1.95703 4.75166L1.88825 4.68604L1.81923 4.75141L0.93123 5.59258L0.854858 5.66492L0.930974 5.73753L4.42671 9.07236L4.49574 9.1382L4.56476 9.07236L12.069 1.91352L12.1449 1.84116L12.069 1.76881L11.1873 0.927644L11.1183 0.861826L11.0493 0.927611L4.49577 7.17353L1.95703 4.75166Z' fill='white' stroke='white' stroke-width='0.2'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-}
-.agreement__checkbox:checked {
-  background-color: var(--active-color);
-  border-color: transparent;
-  transition-duration: var(--duration);
-  transition-timing-function: var(--timing-function);
+
+  &:checked {
+    background-color: var(--active-color);
+    border-color: transparent;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
+  }
 }
 
 .agreement__text {
@@ -173,17 +180,20 @@
   margin: 0 auto;
   width: 200px;
   height: 50px;
+
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
+  border-radius: 4px;
+
   background-color: var(--active-color);
   color: #fff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
   transition-property: background-color;
   transition-duration: var(--duration);
   transition-timing-function: var(--timing-function);
-  border-radius: 4px;
 
   &:hover,
   &:focus {

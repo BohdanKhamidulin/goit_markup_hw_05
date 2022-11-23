@@ -7,7 +7,7 @@
   color: #2196f3;
   margin-right: 93px;
 
-  @extend .link;
+  @extend %link;
   & .logo__footer--second-part {
     color: #ffffff;
   }

@@ -31,32 +31,6 @@ ul {
 .header-item__link--currentrent {
   color: var(--active-color);
 }
-.link {
-  text-decoration: none;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-  &:hover,
-  &:focus {
-    color: var(--active-color);
-  }
-}
-.list {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-.wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.conteiner {
-  width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
 
 img {
   display: block;
@@ -69,21 +43,14 @@ button {
   border: none;
   border-radius: 4px;
 }
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
+
 body {
   font-family: var(--main-font);
   color: var(--main-color);
   font-size: 14px;
   letter-spacing: var(--main-letter-spacing);
 }
-.title {
-  margin-bottom: 50px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: var(--main-letter-spacing);
+
+@mixin border($size: 1px, $type: solid, $color: rgba(255, 255, 255, 0.3)) {
+  border: $size $type $color;
 }

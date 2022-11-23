@@ -1,8 +1,8 @@
 .command__conteiner {
-  @extend .conteiner;
+  @extend %conteiner;
 }
 .command__title {
-  @extend .title;
+  @extend %title;
 }
 
 .command__social-list {
@@ -38,11 +38,11 @@
 .command__list {
   display: flex;
   column-gap: 30px;
-  @extend .list;
+  @extend %list;
 }
 .command {
   background: #f5f4fa;
-  @extend .section;
+  @extend %section;
 }
 
 .command__social-icon {
@@ -61,7 +61,7 @@
   transition-duration: var(--duration);
   transition-timing-function: var(--timing-function);
 
-  @extend .link;
+  @extend %link;
 
   &:hover {
     background-color: var(--active-color);
